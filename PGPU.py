@@ -37,7 +37,7 @@ def gpu(x,y,z,N):
     for i in range(N):
         for j in range(N):
             for k in range(N):
-                z[i-1][j-1] = x[i-1][k-1] * y[k-1][j-1]
+                z[i-1][j-1] += x[i-1][k-1] * y[k-1][j-1]
     return z
 
 cpu(x,y,z,2) #compiling function
